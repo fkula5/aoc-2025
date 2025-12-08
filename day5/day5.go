@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"log"
 	"os"
 	"sort"
 	"strconv"
@@ -11,10 +10,7 @@ import (
 )
 
 func main() {
-	file, err := os.Open("data.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
+	file, _ := os.Open("data.txt")
 	defer file.Close()
 
 	var ranges [][]int64
